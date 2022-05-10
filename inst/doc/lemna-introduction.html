@@ -332,7 +332,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <h1 class="title toc-ignore">Introduction to the Lemna package</h1>
 <h4 class="author">Nils Kehrein</h4>
-<h4 class="date">30 March, 2022</h4>
+<h4 class="date">10 May, 2022</h4>
 
 
 <div id="TOC">
@@ -360,7 +360,7 @@ helpers to simulate the growth of <em>Lemna</em> (duckweed) aquatic
 plant populations. <em>Lemna</em> is a standard test macrophyte used in
 ecotox effect studies. The model was described and published by the
 SETAC Europe Interest Group Effect Modeling (Klein <em>et al.</em>
-2021).</p>
+2022).</p>
 <p>The model’s main state variable is biomass, or <code>BM</code> for
 short, of the simulated <em>Lemna</em> population. Growth of
 <em>Lemna</em> is influenced by environmental variables such as
@@ -807,12 +807,12 @@ and up to 50+ for longer scenarios:</p>
 <span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lemna</span>(metsulfuron, <span class="at">ode_mode=</span><span class="st">&quot;c&quot;</span>)</span>
 <span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Unit: milliseconds</span></span>
-<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                expr    min     lq     mean  median      uq</span></span>
-<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  lemna(metsulfuron, ode_mode = &quot;r&quot;) 5.4758 5.8199 6.085448 5.93530 6.07075</span></span>
-<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  lemna(metsulfuron, ode_mode = &quot;c&quot;) 1.5379 1.6696 1.807285 1.71995 1.79750</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                expr    min      lq     mean median      uq</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  lemna(metsulfuron, ode_mode = &quot;r&quot;) 5.3761 5.89510 6.120469 6.0419 6.16640</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  lemna(metsulfuron, ode_mode = &quot;c&quot;) 1.5604 1.69495 1.838234 1.7438 1.80695</span></span>
 <span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     max neval</span></span>
-<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  8.6725   100</span></span>
-<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  4.3675   100</span></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  8.3445   100</span></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  4.0191   100</span></span>
 <span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Benchmark the more complex and longer focusd1 scenario</span></span>
 <span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>microbenchmark<span class="sc">::</span><span class="fu">microbenchmark</span>(</span>
@@ -821,12 +821,12 @@ and up to 50+ for longer scenarios:</p>
 <span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">times =</span> <span class="dv">10</span></span>
 <span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Unit: milliseconds</span></span>
-<span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                            expr       min        lq       mean     median</span></span>
-<span id="cb26-22"><a href="#cb26-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  lemna(focusd1, ode_mode = &quot;r&quot;) 1665.2906 1666.5916 1717.22786 1677.51140</span></span>
-<span id="cb26-23"><a href="#cb26-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  lemna(focusd1, ode_mode = &quot;c&quot;)   34.9322   36.1957   36.76821   36.82125</span></span>
-<span id="cb26-24"><a href="#cb26-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;         uq       max neval</span></span>
-<span id="cb26-25"><a href="#cb26-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1753.8791 1885.3002    10</span></span>
-<span id="cb26-26"><a href="#cb26-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    37.2631   38.5281    10</span></span></code></pre></div>
+<span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                            expr       min        lq       mean    median</span></span>
+<span id="cb26-22"><a href="#cb26-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  lemna(focusd1, ode_mode = &quot;r&quot;) 1632.8207 1649.5268 1674.45976 1664.3491</span></span>
+<span id="cb26-23"><a href="#cb26-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  lemna(focusd1, ode_mode = &quot;c&quot;)   34.4878   35.1462   36.37738   36.2851</span></span>
+<span id="cb26-24"><a href="#cb26-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;         uq      max neval</span></span>
+<span id="cb26-25"><a href="#cb26-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1680.3971 1799.834    10</span></span>
+<span id="cb26-26"><a href="#cb26-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    37.5887   38.167    10</span></span></code></pre></div>
 <p>There is however a small disadvantage to using the <em>C</em> model:
 if there are any issues stemming from, for example, invalid parameters,
 the error messages raised by the <em>C</em> code might be less
@@ -888,12 +888,12 @@ variables which can support debugging and model understanding:</p>
 <div id="references" class="section level2">
 <h2>References</h2>
 <ul>
-<li>Klein J., Cedergreen N., Heine S., Reichenberger S., Rendal C.,
-Schmitt W., Hommen U., 2021: Refined description of the <em>Lemna</em>
-TKTD growth model based on <em>Schmitt et al.</em> (2013) – equation
-system and default parameters. Report of the working group
-<em>Lemna</em> of the SETAC Europe Interest Group Effect Modeling.
-Version 1, uploaded on 22. Sept. 2021. <a href="https://www.setac.org/group/SEIGEffectModeling" class="uri">https://www.setac.org/group/SEIGEffectModeling</a></li>
+<li>Klein J., Cedergreen N., Heine S., Kehrein N., Reichenberger S.,
+Rendal C., Schmitt W., Hommen U., 2022: Refined description of the
+<em>Lemna</em> TKTD growth model based on <em>Schmitt et al.</em> (2013)
+– equation system and default parameters, implementation in R. Report of
+the working group <em>Lemna</em> of the SETAC Europe Interest Group
+Effect Modeling. Version 1.1, uploaded on 09 May 2022. <a href="https://www.setac.org/group/SEIGEffectModeling" class="uri">https://www.setac.org/group/SEIGEffectModeling</a></li>
 </ul>
 </div>
 

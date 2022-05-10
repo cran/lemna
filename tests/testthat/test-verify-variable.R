@@ -71,3 +71,6 @@ test_that("FOCUS R3 Stream", {
 
   expect_equal(df_kr, df_kc, tolerance=1e-4, ignore_attr=TRUE)
 })
+
+# disable parallel processing
+future::plan(future::sequential())
