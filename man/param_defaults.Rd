@@ -86,6 +86,14 @@ Returns the default Lemna model parameters as reported by Klein \emph{et al.} (2
 }
 
 }
+
+\subsection{Model changes}{
+\itemize{
+\item \emph{lemna} version 1.0.2
+The default value of parameter \code{beta} is set to \code{0.25}. This reflects the
+changes made to the (upcoming) SETAC working group report version 1.2.
+}
+}
 }
 \section{Functions}{
 \itemize{
@@ -116,5 +124,5 @@ based on \emph{Schmitt et al.} (2013) – equation system and default parameters
 implementation in R.
 Report of the working group \emph{Lemna} of the SETAC Europe Interest Group Effect
 Modeling. Version 1.1, uploaded on 09 May 2022.
-\url{https://www.setac.org/group/SEIGEffectModeling}
+\url{https://www.setac.org/group/effect-modeling.html}
 }
